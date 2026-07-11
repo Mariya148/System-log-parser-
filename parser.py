@@ -9,7 +9,7 @@ class LogParser:
         with open(self.file_path, "r") as file:  #read from the file 
 
             for line in file:  # line= 1 row from the file
-                words = line.split()
+                words = line.split()  # cut the string whenever there's a space
                 level = words[2]  # in the file index 2 is always the log level we are looking for
 
                 if level == "[ERROR]" or level == "[CRITICAL]":
